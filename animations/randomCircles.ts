@@ -1,3 +1,5 @@
+import { CanvasBase } from './canvasBase';
+
 import { RandomHelper } from '../helpers';
 
 const MOVE_SPEED = 5;
@@ -32,7 +34,7 @@ class Circle {
 
     update() {
         this.ctx.beginPath();
-        this.ctx.arc(this.x, this.y, this.radius, Math.PI * 2, 0, false);
+        this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
 
@@ -51,18 +53,12 @@ class Circle {
     }
 }
 
-export class RandomCircles {
-    canvas:HTMLCanvasElement;
-    ctx:CanvasRenderingContext2D;
+export class RandomCircles extends CanvasBase {
     $circles:Circle[];
 
     constructor() {
-        this.canvas = document.querySelector('canvas');
-        this.ctx = this.canvas.getContext('2d');
+        super();
         this.$circles = [];
-
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
     }
 
     start() {
