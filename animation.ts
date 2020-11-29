@@ -1,4 +1,4 @@
-import { RandomCircles } from './animations';
+import { Matrix } from './animations';
 
-const animation = new RandomCircles();
+const animation = new Matrix();
 animation.start();
