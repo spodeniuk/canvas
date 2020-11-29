@@ -1,4 +1,4 @@
-import { Matrix } from './animations';
+import { TextHover } from './animations';
 
-const animation = new Matrix();
+const animation = new TextHover();
 animation.start();
