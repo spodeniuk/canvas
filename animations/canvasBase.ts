@@ -1,5 +1,5 @@
 export class CanvasBase {
-    private canvas:HTMLCanvasElement;
+    canvas:HTMLCanvasElement;
     ctx:CanvasRenderingContext2D;
     height:number;
     width:number;
